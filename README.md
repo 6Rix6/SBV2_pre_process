@@ -2,7 +2,8 @@
 style-bert-vits2で学習するために動画を発話単位の音声ファイルに分割するためのスクリプトです
 
 > [!NOTE]
-> **必ずLinux(Wsl)上のvenv仮想環境で実行してください**
+> **必ずLinux(Wsl)上での実行をお勧めします**
+> Windows上での動作確認はしていません
 
 ## 初期設定
 1. pythonとpython-venvのインストール
