@@ -10,7 +10,6 @@ style-bert-vits2で学習するために動画を発話単位の音声ファイ�
 sudo apt update
 sudo apt install python3 python3-venv
 ```
-
 2. venv環境を構築
 ```
 python3 -m venv .venv
@@ -30,6 +29,19 @@ pip install pydub numpy moviepy yt_dlp
 ```
 
 ## 使い方
-1. yt-dl.pyでyoutube動画をダウンロード
-2. VideoToAudio.pyで動画をwavファイルに変換
-3. SplitAudio.pyで無音区間で動画を分割
+### Youtubeから動画をダウンロードする場合
+SBV2_Pre_Process.pyを実行
+```
+python3 SBV2_Pre_Process.py
+```
+youtubeのリンクと出力先のディレクトリ名が聞かれたら入力
+
+### 既存のファイルを使用する場合
+1. VideoToAudio.pyで動画をwavファイルに変換
+```
+python3 VideoToAudio.py
+```
+2. SplitAudio.pyで無音区間で動画を分割
+```
+python3 SplitAudio.py
+```
