@@ -1,6 +1,6 @@
 import yt_dlp
 
-url = "https://www.youtube.com/watch?v=yeMQq_GoMZs"
+url = input("YouTubeのURLを入力: ")
 
 ydl_opts = {
     'format':'best',
