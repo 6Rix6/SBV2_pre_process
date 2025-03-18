@@ -24,8 +24,4 @@ for filename in os.listdir(input_folder):
         audio_clip.write_audiofile(output_path, codec='pcm_s16le', logger='bar')
         print(f"{output_path} に保存されました。\n")
 
-        # 変換後に元のファイルを削除
-        os.remove(input_path)
-        print(f"{input_path} を削除しました。\n")
-
 print("すべてのファイルの変換が完了しました。")
