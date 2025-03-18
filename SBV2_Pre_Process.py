@@ -52,7 +52,7 @@ def split_audio(audio_path):
         chunks = split_on_silence(
             audio,
             min_silence_len=1200,
-            silence_thresh=decibels-25,
+            silence_thresh=decibels-29,
             keep_silence=250
         )
         
