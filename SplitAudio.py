@@ -20,7 +20,7 @@ for filename in os.listdir(input_folder):
             chunks = split_on_silence(
                 audio,
                 min_silence_len=1200,  # 無音と判定する最小の時間（ミリ秒）
-                silence_thresh=decibels-25,  # 無音と判定するデシベル（オーディオのdBFSに基づく）
+                silence_thresh=decibels-30,  # 無音と判定するデシベル（オーディオのdBFSに基づく）
                 keep_silence=250  # 分割後も無音を残す時間（ミリ秒）
             )
 
