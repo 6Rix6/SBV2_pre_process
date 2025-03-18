@@ -45,3 +45,7 @@ python3 VideoToAudio.py
 ```
 python3 SplitAudio.py
 ```
+
+## 参考
+このスクリプトは以下のサイトを参考に作成しました
+[推しに話してもらおうの会【SBV2を利用した音声生成について】](https://tonevoadventcalendar.hatenablog.com/entry/2024/12/24/154640)
