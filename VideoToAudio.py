@@ -1,22 +1,22 @@
 import os
 from moviepy import AudioFileClip
 
-
 # フォルダのパス
 input_folder = 'inputs'
 output_folder = 'outputs'
-
 
 # フォルダが存在しない場合、作成
 os.makedirs(input_folder, exist_ok=True)
 os.makedirs(output_folder, exist_ok=True)
 
+# ユーザーに出力ファイル名の指定を求める
+custom_filename = input("モデル名を入力: ")
 
 # inputsフォルダ内のすべての.mp4ファイルを処理
 for filename in os.listdir(input_folder):
     if filename.endswith('.mp4'):
         input_path = os.path.join(input_folder, filename)
-        output_path = os.path.join(output_folder, filename.replace('.mp4', '.wav'))
+        output_path = os.path.join(output_folder, f"{custom_filename}.wav")
 
         # 音声を抽出してWAV形式で保存
         print(f"{filename} を変換中...")
