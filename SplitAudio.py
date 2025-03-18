@@ -35,6 +35,10 @@ for filename in os.listdir(input_folder):
                 chunk.export(chunk_path, format="wav")
                 print(f"{chunk_path} に保存しました。")
 
+            # 変換後に元のファイルを削除
+            os.remove(input_path)
+            print(f"{input_path} を削除しました。\n")
+
         except Exception as e:
             print(f"エラーが発生しました: {e}")
 
