@@ -1,16 +1,11 @@
-#仮想環境で実行！！！
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
 import os
-import numpy as np
-
 
 input_folder = 'outputs'
-output_folder = 'outputs/split_audio'
-
+output_folder = 'outputs'
 
 os.makedirs(output_folder, exist_ok=True)
-
 
 for filename in os.listdir(input_folder):
     if filename.endswith('.wav'):
@@ -32,8 +27,9 @@ for filename in os.listdir(input_folder):
             # チャンクの数と内容を表示
             print(f"{filename} の分割結果: {len(chunks)} チャンクが作成されました。")
 
-            voice_folder = os.path.join(output_folder,filename)
-            os.makedirs(voice_folder,exist_ok=True)
+            voice_folder = os.path.join(output_folder, base_filename, "raw")
+            os.makedirs(voice_folder, exist_ok=True)
+            
             for i, chunk in enumerate(chunks):
                 chunk_path = os.path.join(voice_folder, f"{base_filename}_chunk_{i+1}.wav")
                 chunk.export(chunk_path, format="wav")
@@ -42,5 +38,4 @@ for filename in os.listdir(input_folder):
         except Exception as e:
             print(f"エラーが発生しました: {e}")
 
-
-print("無音区間での分割が完了しました。") 
+print("無音区間での分割が完了しました。")
