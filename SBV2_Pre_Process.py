@@ -51,9 +51,9 @@ def split_audio(audio_path):
         
         chunks = split_on_silence(
             audio,
-            min_silence_len=1200,
-            silence_thresh=decibels-29,
-            keep_silence=250
+            min_silence_len=1000, # 無音と判定する最小の時間（ミリ秒）
+            silence_thresh=decibels-29,  # 無音と判定するデシベル（オーディオのdBFSに基づく）
+            keep_silence=250 # 分割後も無音を残す時間（ミリ秒）
         )
         
         print(f"{audio_path} の分割結果: {len(chunks)} チャンクが作成されました。")
