@@ -74,6 +74,9 @@ outputs/
 
 処理済みファイルは `sbv2/Style-Bert-VITS2/Data/` に移動してください。
 
+## 備考
+分割されたファイルが多い場合、`AudioRemove.py`を使用して学習に使用できない長さのファイルを削除することをお勧めします。
+
 ## 参考
 このスクリプトは以下のサイトを参考に作成しました。  
 [推しに話してもらおうの会【SBV2を利用した音声生成について】](https://tonevoadventcalendar.hatenablog.com/entry/2024/12/24/154640)

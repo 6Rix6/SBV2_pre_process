@@ -10,7 +10,7 @@ def get_audio_length(file_path):
         print(f"エラーが発生しました: {e}")
         return 0
 
-def delete_specific_length_audio_files(directory, min_threshold_seconds=5, max_threshold_seconds=15):
+def delete_specific_length_audio_files(directory, min_threshold_seconds=10, max_threshold_seconds=15):
     # 対象とする音声ファイルの拡張子
     audio_extensions = ('*.mp3', '*.wav')
 
