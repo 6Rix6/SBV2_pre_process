@@ -15,9 +15,9 @@
 このスクリプトは `python`、`python-venv` を使用します。また、`ffmpeg` のインストールが必要です。
 
 ### FFmpeg のインストール方法
-- **Windows**: [公式サイト](https://ffmpeg.org/download.html) からダウンロードし、システム PATH に追加
+- **Windows(WSLを使うことを推奨します)**: [公式サイト](https://ffmpeg.org/download.html) からダウンロードし、システム PATH に追加
 - **Mac (Homebrew)**: `brew install ffmpeg`
-- **Linux**: `sudo apt install ffmpeg`（Debian系）または `sudo yum install ffmpeg`（RHEL系）
+- **Linux(WSL)**: `sudo apt install ffmpeg`（Debian系）または `sudo yum install ffmpeg`（RHEL系）
 
 ## 使い方 (Linux)
 ### 1. リポジトリをクローン
